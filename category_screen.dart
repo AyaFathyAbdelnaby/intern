@@ -9,9 +9,9 @@ class CategoryScreen extends StatelessWidget {
       //appBar:AppBar(title: Text("data")) ,
       body: Column(
         children: [
-          SizedBox(height: 36),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 22),
+          const SizedBox(height: 36),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [Icon(Icons.arrow_back), Icon(Icons.favorite_border)],
@@ -19,21 +19,29 @@ class CategoryScreen extends StatelessWidget {
           ),
           Image.network(
               'https://atlas-content-cdn.pixelsquid.com/stock-images/sofa-single-ywYZBl8-600.jpg'),
-          SizedBox(height: 21),
+          const SizedBox(height: 21),
           Padding(
             padding: const EdgeInsets.fromLTRB(24, 0, 26, 0),
             child: Row(
               children: [
-                Text('Room Sofa'),
-                Spacer(),
+                const Text(
+                  'Room Sofa',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 32,
+                      fontWeight: FontWeight.w600),
+                ),
+                const Spacer(),
                 Container(
                   decoration: BoxDecoration(
-                      color: Color(0xffE7E7E7),
+                      color: const Color(0xffE7E7E7),
                       borderRadius: BorderRadius.circular(5)),
-                  child: Row(
+                  child: const Row(
                     children: [
                       Icon(Icons.remove),
+                      SizedBox(width: 5),
                       Text('1'),
+                      SizedBox(width: 5),
                       Icon(Icons.add),
                     ],
                   ),
@@ -42,36 +50,51 @@ class CategoryScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(26, 14, 0, 14),
+            padding: const EdgeInsetsDirectional.fromSTEB(26, 14, 0, 14),
             child: Row(
               children: [
                 Container(
                   width: 15,
                   height: 15,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Color(0xff7993AE)),
                 ),
-                SizedBox(
-                  width: 5,
-                ),
+                const SizedBox(width: 5),
                 Container(
                   width: 15,
                   height: 15,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: Color(0xff492e58)),
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color.fromARGB(255, 180, 104, 221)),
                 ),
-                SizedBox(
-                  width: 5,
-                ),
+                const SizedBox(width: 5),
                 Container(
                   width: 15,
                   height: 15,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Color(0xff363f0c)),
                 ),
               ],
             ),
-          )
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25),
+            child: Text(
+              "Drawing Room Wooden Sofa Set is solid wooden sofa set which you"
+              "can contrast the cushion of any color. The good sight caused ue to the furniture help us relax for a longer time. ",
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xff7993AE)),
+            onPressed: () {},
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 38, vertical: 15),
+              child: Text('Add to cart'),
+            ),
+          ),
+          const SizedBox(height: 10),
         ],
       ),
     );
