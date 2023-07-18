@@ -25,13 +25,20 @@ class CategoryScreen extends StatelessWidget {
             height: 21
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(24, 26, 0, 0),
+            padding: const EdgeInsets.fromLTRB(24, 0, 26, 0),
             child: Row(
               children: [
                 Text('Room Sofa'),
-                Icon(Icons.remove),
-                Text('1'),
-                Icon(Icons.add)
+                Spacer(),
+                Container(decoration: BoxDecoration(color:Color(0xffE7E7E7),borderRadius: BorderRadius.circular(5)),
+                  child: Row(
+                    children: [
+                      Icon(Icons.remove),
+                      Text('1'),
+                      Icon(Icons.add),
+                    ],
+                  ),
+                )
               ],
             ),
           )
