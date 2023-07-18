@@ -10,7 +10,7 @@ class CategoryScreen extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 36,
+            height: 36
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 22),
@@ -18,7 +18,12 @@ class CategoryScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [Icon(Icons.arrow_back), Icon(Icons.favorite_border)],
             ),
-          )
+          ),
+          Image.network(
+              'https://atlas-content-cdn.pixelsquid.com/stock-images/sofa-single-ywYZBl8-600.jpg'),
+          SizedBox(
+            height: 21
+          ),
         ],
       ),
     );
