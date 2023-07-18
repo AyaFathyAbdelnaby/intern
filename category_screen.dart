@@ -9,9 +9,7 @@ class CategoryScreen extends StatelessWidget {
       //appBar:AppBar(title: Text("data")) ,
       body: Column(
         children: [
-          SizedBox(
-            height: 36
-          ),
+          SizedBox(height: 36),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 22),
             child: Row(
@@ -21,16 +19,17 @@ class CategoryScreen extends StatelessWidget {
           ),
           Image.network(
               'https://atlas-content-cdn.pixelsquid.com/stock-images/sofa-single-ywYZBl8-600.jpg'),
-          SizedBox(
-            height: 21
-          ),
+          SizedBox(height: 21),
           Padding(
             padding: const EdgeInsets.fromLTRB(24, 0, 26, 0),
             child: Row(
               children: [
                 Text('Room Sofa'),
                 Spacer(),
-                Container(decoration: BoxDecoration(color:Color(0xffE7E7E7),borderRadius: BorderRadius.circular(5)),
+                Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xffE7E7E7),
+                      borderRadius: BorderRadius.circular(5)),
                   child: Row(
                     children: [
                       Icon(Icons.remove),
@@ -39,6 +38,37 @@ class CategoryScreen extends StatelessWidget {
                     ],
                   ),
                 )
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(26, 14, 0, 14),
+            child: Row(
+              children: [
+                Container(
+                  width: 15,
+                  height: 15,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: Color(0xff7993AE)),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  width: 15,
+                  height: 15,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: Color(0xff492e58)),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  width: 15,
+                  height: 15,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: Color(0xff363f0c)),
+                ),
               ],
             ),
           )
